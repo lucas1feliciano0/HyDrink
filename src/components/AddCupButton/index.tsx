@@ -16,9 +16,10 @@ import {Container, Icon} from './styles';
 
 interface IProps {
   onPress: () => void;
+  disabled?: boolean;
 }
 
-const AddCupButton: React.FC<IProps> = ({onPress}) => {
+const AddCupButton: React.FC<IProps> = ({onPress, disabled, ...rest}) => {
   const theme = useContext(ThemeContext);
   const {width} = useWindowDimensions();
 
@@ -51,7 +52,7 @@ const AddCupButton: React.FC<IProps> = ({onPress}) => {
   }
 
   return (
-    <Container onPress={handlePress}>
+    <Container onPress={handlePress} disabled={disabled} {...rest}>
       <Svg width={theme.wp('30%')} height={theme.wp('30%')}>
         <AnimatedCircle animatedProps={buttonAnimatedProps} />
       </Svg>

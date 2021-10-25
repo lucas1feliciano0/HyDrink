@@ -4,9 +4,12 @@ import {ThemeContext} from 'styled-components/native';
 
 import {Container} from './styles';
 
-const Drop: React.FC = () => {
+interface IProps {
+  percentage: number;
+}
+
+const Drop: React.FC<IProps> = ({percentage = 0}) => {
   const theme = useContext(ThemeContext);
-  const percentage = 44;
 
   return (
     <Container
@@ -16,11 +19,22 @@ const Drop: React.FC = () => {
       width={theme.wp('50%')}
       height={theme.hp('45%')}>
       <Defs>
-        <LinearGradient id="test" gradientTransform="rotate(90)">
-          <Stop offset="33.666%" stopColor={theme.colors.background.primary} />
-          <Stop offset="55.666%" stopColor={theme.colors.background.primary} />
-          <Stop offset="55.666%" stopColor={theme.colors.secondary} />
-          <Stop offset="100%" stopColor={theme.colors.secondary} />
+        <LinearGradient id="test" y2="0%" x2="0%" y1="100%" x1="0%">
+          <Stop
+            offset={`${percentage}%`}
+            stopColor={theme.colors.secondary}
+            stopOpacity="1"
+          />
+          <Stop
+            offset={`${percentage}%`}
+            stopColor={theme.colors.secondary}
+            stopOpacity="0"
+          />
+          <Stop
+            offset="100%"
+            stopColor={theme.colors.secondary}
+            stopOpacity="0"
+          />
         </LinearGradient>
       </Defs>
       <Path
@@ -29,15 +43,14 @@ const Drop: React.FC = () => {
         fill="url(#test)"
         strokeWidth={8}
       />
-
       <Text
         x={theme.wp('45%')}
         y={theme.hp('45%')}
-        fill={theme.colors.white}
         fontFamily="Lemon-Regular"
+        fill={percentage < 50 ? theme.colors.primary : theme.colors.white}
         fontSize={theme.fontSize.headline2}
         textAnchor="middle">
-        55%
+        {`${percentage}%`}
       </Text>
     </Container>
   );
