@@ -15,6 +15,7 @@ const App: React.FC = () => {
   useEffect(() => {
     RNBootSplash.hide({fade: true});
   }, []);
+
   return (
     <Provider store={store}>
       <PersistGate persistor={persistor}>

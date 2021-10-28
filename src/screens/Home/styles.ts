@@ -4,6 +4,7 @@ import FontistoIcon from 'react-native-vector-icons/Fontisto';
 import DropComponent from '@components/Drop';
 import AddCupButtonComponent from '@components/AddCupButton';
 import CupIconComponent from '@components/CupIcon';
+import CongratsModalComponent from '@components/CongratsModal';
 
 export const Container = styled.View`
   flex: 1;
@@ -60,6 +61,8 @@ export const CupIcon = styled(CupIconComponent)``;
 export const InvisibleView = styled.View`
   width: ${props => props.theme.fontSize.headline}px;
 `;
+
+export const CongratsModal = styled(CongratsModalComponent)``;
 
 export const StatusBar = styled.StatusBar.attrs(props => ({
   backgroundColor: props.theme.colors.background.primary,

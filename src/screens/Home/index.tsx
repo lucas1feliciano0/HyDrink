@@ -23,6 +23,7 @@ import {
   InvisibleView,
   CupIcon,
   CupsContainer,
+  CongratsModal,
 } from './styles';
 import {isToday, isValid, parseISO} from 'date-fns';
 
@@ -123,6 +124,7 @@ const Home: React.FC = () => {
   return (
     <Container>
       <StatusBar />
+      <CongratsModal visible={getPercentage() === '100'} />
       <Section>
         <MotiView state={mlTextAnimation} transition={{duration: 200}}>
           <Title>{defaultMl * cups.length} ml</Title>
