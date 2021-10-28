@@ -23,6 +23,7 @@ import {
   CupIcon,
   CupsContainer,
 } from './styles';
+import {isToday, isValid, parseISO} from 'date-fns';
 
 const useFadeInDown = () => {
   return useAnimationState({
@@ -44,7 +45,12 @@ const Home: React.FC = () => {
 
   const [activeText, setActiveText] = useState(0);
 
-  const cups = useSelector((state: RootState) => state.drinks.cups);
+  const cups = useSelector((state: RootState) => state.drinks.cups).filter(
+    cup =>
+      isValid(cup.created_at)
+        ? isToday(cup.created_at)
+        : isToday(parseISO(cup.created_at)),
+  );
 
   function getPercentage() {
     const total = quantity;
@@ -59,6 +65,7 @@ const Home: React.FC = () => {
     };
 
     dispatch(Creators.addCup(newCup));
+
     mlTextAnimation.transitionTo(() => 'from');
 
     setTimeout(() => {
