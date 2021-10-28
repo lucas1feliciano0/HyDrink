@@ -1,3 +1,5 @@
 <resources>
     <color name="colorAccent">#50A9FC</color>
+    <color name="bootsplash_background">#FDFDFF</color>
+    <color name="status_bar_color">#FDFDFF</color>
 </resources>

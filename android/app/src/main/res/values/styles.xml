@@ -5,4 +5,10 @@
        <item name="android:forceDarkAllowed">false</item>
     </style>
 
+    <style name="BootTheme" parent="AppTheme">
+        <!-- set the generated bootsplash.xml drawable as activity background -->
+        <item name="android:background">@drawable/bootsplash</item>
+        <item name="android:statusBarColor">@color/status_bar_color</item>
+    </style>
+
 </resources>
