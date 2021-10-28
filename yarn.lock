@@ -3381,9 +3381,9 @@ flatted@^2.0.0:
   integrity sha512-r5wGx7YeOwNWNlCA0wQ86zKyDLMQr+/RB8xy74M4hTphfmjlijTSSXGuH8rnvKZnfT9i+75zmd8jcKdMR4O6jA==
 
 flow-parser@0.*:
-  version "0.162.1"
-  resolved "https://registry.yarnpkg.com/flow-parser/-/flow-parser-0.162.1.tgz#128150cd483c4899719fb5ceb06744282e51a10d"
-  integrity sha512-yp0oSVaawR8p39PGhOb/TtclByOxJirI+DVPR99GkeRY8xZ/4gLt+BeqcLgJsed1tE1YwMgdiAYKSfhoLTFVeg==
+  version "0.163.0"
+  resolved "https://registry.yarnpkg.com/flow-parser/-/flow-parser-0.163.0.tgz#c2d5c77c57c53e8357016a837f3e3af04a0c87a6"
+  integrity sha512-txOsBcZ1nKsKtoAsBFnArFdq0cnPCmEHI5S2jQIgU1ZO1xtWpg64TsZSRktsaOyoWLpAvVxPap4Qbdd/TCJ3FQ==
 
 flow-parser@^0.121.0:
   version "0.121.0"
@@ -6062,9 +6062,9 @@ react-native-vector-icons@^8.1.0:
     yargs "^16.1.1"
 
 react-native@^0.66.0:
-  version "0.66.0"
-  resolved "https://registry.yarnpkg.com/react-native/-/react-native-0.66.0.tgz#99bdd83a9a612a71b94242767989d666d445b007"
-  integrity sha512-m26TKwzsfHVdZ1hDG+7mZ4M4ftxFFZrhtiT0OXuwfBzmNtB3xhsJtYszPeizw33c9YNp8rvehKT3c4ldDCW6kA==
+  version "0.66.1"
+  resolved "https://registry.yarnpkg.com/react-native/-/react-native-0.66.1.tgz#96defaf60579406321340ebe1dcea76a3c942806"
+  integrity sha512-BBvytmqlOLL+bRcO0jBiYfg16lYRsYDOC8/5E+bpnhb3EGtU+YCQAYfszw6JL7Hfy0ftnQNP5yj8pt+vqMHXIA==
   dependencies:
     "@jest/create-cache-key-function" "^27.0.1"
     "@react-native-community/cli" "^6.0.0"
@@ -7184,9 +7184,9 @@ typescript@^4.4.4:
   integrity sha512-DqGhF5IKoBl8WNf8C1gu8q0xZSInh9j1kJJMqT3a94w1JzVaBU4EXOSMrz9yDqMT0xt3selp83fuFMQ0uzv6qA==
 
 ua-parser-js@^0.7.30:
-  version "0.7.30"
-  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.30.tgz#4cf5170e8b55ac553fe8b38df3a82f0669671f0b"
-  integrity sha512-uXEtSresNUlXQ1QL4/3dQORcGv7+J2ookOG2ybA/ga9+HYEXueT2o+8dUJQkpedsyTyCJ6jCCirRcKtdtx1kbg==
+  version "0.7.31"
+  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.31.tgz#649a656b191dffab4f21d5e053e27ca17cbff5c6"
+  integrity sha512-qLK/Xe9E2uzmYI3qLeOmI0tEOt+TBBQyUIAh4aAgU05FVYzeZrKUdkAZfBNVGRaHVgV0TDkdEngJSw/SyQchkQ==
 
 uglify-es@^3.1.9:
   version "3.3.9"

@@ -3,12 +3,14 @@ import FontistoIcon from 'react-native-vector-icons/Fontisto';
 
 import DropComponent from '@components/Drop';
 import AddCupButtonComponent from '@components/AddCupButton';
+import CupIconComponent from '@components/CupIcon';
 
 export const Container = styled.View`
   flex: 1;
   background-color: ${props => props.theme.colors.background.primary};
   align-items: center;
   justify-content: space-between;
+  padding: 0 ${props => props.theme.padding.large}px;
   padding-top: ${props => props.theme.padding.large}px;
   padding-bottom: ${props => props.theme.hp('10%')}px;
 `;
@@ -31,6 +33,7 @@ export const Subtitle = styled.Text`
   font-size: ${props => props.theme.fontSize.small}px;
   color: ${props => props.theme.colors.texts.secondary};
   text-align: center;
+  margin-bottom: ${props => props.theme.padding.medium}px;
 `;
 
 export const Drop = styled(DropComponent)``;
@@ -44,6 +47,15 @@ export const UndoIcon = styled(FontistoIcon).attrs(props => ({
   size: props.theme.fontSize.headline,
   color: props.theme.colors.primary,
 }))<any>``;
+
+export const CupsContainer = styled.View`
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+`;
+
+export const CupIcon = styled(CupIconComponent)``;
 
 export const InvisibleView = styled.View`
   width: ${props => props.theme.fontSize.headline}px;

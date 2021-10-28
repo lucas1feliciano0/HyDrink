@@ -1,9 +1,9 @@
 import {combineReducers} from 'redux';
 
-import list from './list';
+import drinks from './drinks';
 
 const rootReducer = combineReducers({
-  list,
+  drinks,
 });
 
 export type RootState = ReturnType<typeof rootReducer>;

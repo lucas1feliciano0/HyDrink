@@ -44,6 +44,9 @@
       "@store/*": [
         "./src/store/*"
       ],
+      "@util/*": [
+        "./src/util/*"
+      ],
     }
   },
   "exclude": [

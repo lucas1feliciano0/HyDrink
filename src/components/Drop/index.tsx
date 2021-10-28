@@ -5,7 +5,7 @@ import {ThemeContext} from 'styled-components/native';
 import {Container} from './styles';
 
 interface IProps {
-  percentage: number;
+  percentage: string;
 }
 
 const Drop: React.FC<IProps> = ({percentage = 0}) => {
@@ -13,7 +13,7 @@ const Drop: React.FC<IProps> = ({percentage = 0}) => {
 
   return (
     <Container
-      viewBox={`${theme.wp('18%')} ${theme.hp('8%')} ${theme.wp(
+      viewBox={`${theme.wp('18%')} ${theme.hp('10%')} ${theme.wp(
         '50%',
       )} ${theme.hp('60%')}`}
       width={theme.wp('50%')}
