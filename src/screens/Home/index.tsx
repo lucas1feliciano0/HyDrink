@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {MotiView} from 'moti';
 import {useAnimationState} from '@motify/core';
+import messaging from '@react-native-firebase/messaging';
 
 import texts from '@util/texts';
 import {quantity, defaultMl} from '@util/cups';
@@ -44,6 +45,7 @@ const Home: React.FC = () => {
   const mlTextAnimation = useFadeInDown();
 
   const [activeText, setActiveText] = useState(0);
+  const [hasNotification, setHasNotification] = useState(true);
 
   const cups = useSelector((state: RootState) => state.drinks.cups).filter(
     cup =>
@@ -104,6 +106,20 @@ const Home: React.FC = () => {
     };
   }, [activeText, textAnimation]);
 
+  useEffect(() => {
+    messaging().subscribeToTopic('general');
+
+    const unsubscribe = messaging().onMessage(async () => {
+      setHasNotification(true);
+
+      setTimeout(() => {
+        setHasNotification(false);
+      }, 1000);
+    });
+
+    return unsubscribe;
+  }, []);
+
   return (
     <Container>
       <StatusBar />
@@ -111,7 +127,7 @@ const Home: React.FC = () => {
         <MotiView state={mlTextAnimation} transition={{duration: 200}}>
           <Title>{defaultMl * cups.length} ml</Title>
         </MotiView>
-        <MotiView state={textAnimation} transition={{duration: 100}}>
+        <MotiView state={textAnimation} transition={{duration: 100, delay: 0}}>
           <Subtitle>{texts[activeText]}</Subtitle>
         </MotiView>
         <CupsContainer>
@@ -132,6 +148,7 @@ const Home: React.FC = () => {
         <AddCupButton
           onPress={handleAddDrink}
           disabled={getPercentage() === '100'}
+          hasNotification={hasNotification}
         />
         <InvisibleView />
       </Section>

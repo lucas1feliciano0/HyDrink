@@ -54,11 +54,11 @@ const HomeTabs: React.FC = () => {
         options={{title: 'Novo registro'}}
         component={Home}
       />
-      <Tab.Screen
+      {/* <Tab.Screen
         name="Statistics"
         options={{title: 'Estatísticas'}}
         component={Home}
-      />
+      /> */}
     </Tab.Navigator>
   );
 };

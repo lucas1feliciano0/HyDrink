@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "751407504966",
+    "project_id": "hydrink-c523d",
+    "storage_bucket": "hydrink-c523d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:751407504966:android:71fad7ba15aeedb53bb447",
+        "android_client_info": {
+          "package_name": "com.hydrink"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "751407504966-2pfai0d8ii3ebiekjggo2btenrmvfqs1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7e5powK8eHI_78SM-i5bDr92N1wOMH7E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "751407504966-2pfai0d8ii3ebiekjggo2btenrmvfqs1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
