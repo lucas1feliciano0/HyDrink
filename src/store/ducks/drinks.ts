@@ -1,7 +1,7 @@
 import {createActions, createReducer} from 'reduxsauce';
 
 export type Cup = {
-  created_at: Date | string;
+  created_at: string;
 };
 
 type INITIAL_STATE_PROPS = {

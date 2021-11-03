@@ -8,6 +8,7 @@ import {ThemeContext} from 'styled-components/native';
 import FontistoIcon from 'react-native-vector-icons/Fontisto';
 
 import Home from '@screens/Home';
+import Statistics from '@screens/Statistics';
 
 export type HomeTabParamList = {
   New: undefined;
@@ -54,11 +55,11 @@ const HomeTabs: React.FC = () => {
         options={{title: 'Novo registro'}}
         component={Home}
       />
-      {/* <Tab.Screen
+      <Tab.Screen
         name="Statistics"
         options={{title: 'Estatísticas'}}
-        component={Home}
-      /> */}
+        component={Statistics}
+      />
     </Tab.Navigator>
   );
 };

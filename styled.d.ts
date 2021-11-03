@@ -45,6 +45,7 @@ declare module 'styled-components' {
 
       background: {
         primary: string;
+        secondary: string;
       };
 
       white: string;

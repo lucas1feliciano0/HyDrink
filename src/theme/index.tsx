@@ -49,6 +49,7 @@ const theme: DefaultTheme = {
 
     background: {
       primary: '#FDFDFF',
+      secondary: '#f7fafd',
     },
 
     white: '#FFFFFF',
@@ -58,7 +59,7 @@ const theme: DefaultTheme = {
       secondary: '#757575',
     },
 
-    shadow: '#A3A8B1',
+    shadow: '#2a2a41',
 
     disabled: '#838B90',
   },

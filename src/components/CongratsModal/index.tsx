@@ -1,5 +1,4 @@
 import React from 'react';
-import {BackHandler} from 'react-native';
 
 import {
   Backdrop,
@@ -13,11 +12,12 @@ import {
 
 interface IProps {
   visible: boolean;
+  onClose: () => void;
 }
 
-const CongratsModal: React.FC<IProps> = ({visible}) => {
+const CongratsModal: React.FC<IProps> = ({visible, onClose}) => {
   function handlePress() {
-    BackHandler.exitApp();
+    onClose();
   }
 
   return (
@@ -26,11 +26,10 @@ const CongratsModal: React.FC<IProps> = ({visible}) => {
         <Container>
           <Title>Parabéns!</Title>
           <Subtitle>
-            Você completou seu desafio diário de beber 2L de água! Volte aqui
-            amanhã para mais.
+            Você completou seu desafio diário de beber 2L de água!
           </Subtitle>
           <Button onPress={handlePress}>
-            <ButtonText>Sair</ButtonText>
+            <ButtonText>Fechar</ButtonText>
           </Button>
         </Container>
       </Backdrop>

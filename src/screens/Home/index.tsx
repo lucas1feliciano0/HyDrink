@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {MotiView} from 'moti';
 import {useAnimationState} from '@motify/core';
+import {isToday, parseISO} from 'date-fns';
 import messaging from '@react-native-firebase/messaging';
 
 import texts from '@util/texts';
@@ -25,7 +26,6 @@ import {
   CupsContainer,
   CongratsModal,
 } from './styles';
-import {isToday, isValid, parseISO} from 'date-fns';
 
 const useFadeInDown = () => {
   return useAnimationState({
@@ -45,14 +45,12 @@ const Home: React.FC = () => {
   const textAnimation = useFadeInDown();
   const mlTextAnimation = useFadeInDown();
 
+  const [modalVisible, setModalVisible] = useState(true);
   const [activeText, setActiveText] = useState(0);
   const [hasNotification, setHasNotification] = useState(true);
 
   const cups = useSelector((state: RootState) => state.drinks.cups).filter(
-    cup =>
-      isValid(cup.created_at)
-        ? isToday(cup.created_at)
-        : isToday(parseISO(cup.created_at)),
+    cup => isToday(parseISO(cup.created_at)),
   );
 
   function getPercentage() {
@@ -64,7 +62,7 @@ const Home: React.FC = () => {
 
   function handleAddDrink() {
     const newCup = {
-      created_at: new Date(),
+      created_at: new Date().toISOString(),
     };
 
     dispatch(Creators.addCup(newCup));
@@ -124,9 +122,12 @@ const Home: React.FC = () => {
   return (
     <Container>
       <StatusBar />
-      <CongratsModal visible={getPercentage() === '100'} />
+      <CongratsModal
+        visible={getPercentage() === '100' && modalVisible}
+        onClose={() => setModalVisible(false)}
+      />
       <Section>
-        <MotiView state={mlTextAnimation} transition={{duration: 200}}>
+        <MotiView state={mlTextAnimation}>
           <Title>{defaultMl * cups.length} ml</Title>
         </MotiView>
         <MotiView state={textAnimation} transition={{duration: 100, delay: 0}}>
