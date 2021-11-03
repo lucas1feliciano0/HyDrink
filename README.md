@@ -12,13 +12,13 @@
 - [Prettier](https://prettier.io/)
 - [React Native Reanimated](https://docs.swmansion.com/react-native-reanimated/)
 - [Moti](https://moti.fyi/)
-- [Lottie](https://airbnb.design/lottie/)
 - [Redux](https://redux.js.org/)
 - [Redux Persist](https://github.com/rt2zz/redux-persist)
 - [Reduxsauce](https://github.com/jkeam/reduxsauce)
 - [Hermes](https://reactnative.dev/docs/hermes)
 - [React Native Sound](https://github.com/zmxv/react-native-sound)
 - [Firebase](https://firebase.google.com/)
+- [React Native Bootsplash](https://github.com/zoontek/react-native-bootsplash)
 
 
 ### 🧭 Running the application
